@@ -1,0 +1,404 @@
+{
+  "profile": {
+    "name": "Soumil Shamak",
+    "role": "Full-Stack Developer",
+    "location": "India",
+    "bio": [
+      "I'm a software developer based in India, focused on backend infrastructure and the internal tools that make other engineers faster. I like problems where correctness and developer experience are both non-negotiable.",
+      "Outside of work I contribute to a couple of open-source CLI tools and I'm slowly writing a compiler nobody asked for."
+    ],
+    "email": "soumilshamak@gmail.com",
+    "social": [
+      { "label": "GitHub", "url": "https://github.com/shamak24" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/soumilshamak" }
+    ],
+    "availability": "open to full-time roles and select consulting work",
+    "focus": ["distributed systems", "dev tools"],
+    "available": true,
+    "hero": {
+      "headline": "I build tools engineers actually enjoy using.",
+      "subheadline": "Six years shipping backend systems and developer platforms — from API design to the CLI that makes your team's Tuesday less painful."
+    },
+    "contact": {
+      "title": "Building something interesting?",
+      "subtitle": "I'm open to full-time roles and select consulting work."
+    },
+    "footer": "last commit"
+  },
+  "sections": [
+    {
+      "id": "home",
+      "label": "home",
+      "number": "",
+      "eyebrow": "",
+      "title": "",
+      "accent": "blue"
+    },
+    {
+      "id": "about",
+      "label": "about",
+      "number": "01",
+      "eyebrow": "01 — who I am",
+      "title": "About",
+      "accent": "purple"
+    },
+    {
+      "id": "skills",
+      "label": "skills",
+      "number": "02",
+      "eyebrow": "02 — technical skills",
+      "title": "Skills",
+      "accent": "green"
+    },
+    {
+      "id": "projects",
+      "label": "projects",
+      "number": "03",
+      "eyebrow": "03 — selected work",
+      "title": "Projects",
+      "accent": "amber"
+    },
+    {
+      "id": "contact",
+      "label": "contact",
+      "number": "04",
+      "eyebrow": "04 — say hello",
+      "title": "Contact",
+      "accent": "purple"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "skills": [
+        { "name": "Python", "accentColor": "#4b8bbe" },
+        { "name": "JavaScript", "accentColor": "#f7df1e" },
+        { "name": "TypeScript", "accentColor": "#3178c6" },
+        { "name": "Go", "accentColor": "#00add8" },
+        { "name": "Java", "accentColor": "#f89820" }
+      ]
+    },
+    {
+      "name": "Frameworks & Development",
+      "skills": [
+        { "name": "React", "accentColor": "#61dafb" },
+        { "name": "Node.js", "accentColor": "#83cd29" },
+        { "name": "Django", "accentColor": "#44b78b" },
+        { "name": "Express", "accentColor": "#9a9a9a" },
+        { "name": "Flutter", "accentColor": "#54c5f8" },
+        { "name": "Next.js", "accentColor": "#e8e8e8" }
+      ]
+    },
+    {
+      "name": "Databases",
+      "skills": [
+        { "name": "PostgreSQL", "accentColor": "#4169e1" },
+        { "name": "MySQL", "accentColor": "#00758f" },
+        { "name": "MongoDB", "accentColor": "#47a248" }
+      ]
+    },
+    {
+      "name": "Libraries",
+      "skills": [
+        { "name": "pandas", "accentColor": "#8a5cf5" },
+        { "name": "NumPy", "accentColor": "#4dabcf" },
+        { "name": "Matplotlib", "accentColor": "#f89939" },
+        { "name": "Seaborn", "accentColor": "#65a9d7" }
+      ]
+    },
+    {
+      "name": "Infrastructure & DevOps",
+      "skills": [
+        { "name": "Docker", "accentColor": "#2496ed" },
+        { "name": "Kubernetes", "accentColor": "#326ce5" },
+        { "name": "Kafka", "accentColor": "#d9d9d9" }
+      ]
+    },
+    {
+      "name": "Developer Tools",
+      "skills": [
+        { "name": "Git", "accentColor": "#f05032" },
+        { "name": "GitHub", "accentColor": "#d9d9d9" },
+        { "name": "VS Code", "accentColor": "#007acc" },
+        { "name": "IntelliJ", "accentColor": "#fe315d" },
+        { "name": "Eclipse", "accentColor": "#7a6fc4" }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "arthasage",
+      "name": "Arthasage",
+      "description": " An AI-powered financial intelligence platform that analyzes spending behavior, detects anomalies and provides personalized financial guidance through a conversational AI assistant.",
+      "tech": ["Python", "FastAPI", "Next.js", "Gemini API, Postgres"],
+      "date": "2026"
+    },
+    {
+      "id": "neuracare",
+      "name": "NeuraCare",
+      "description": "An AI-powered health management platform that delivers personalized risk alerts, diet guidance and smart medication reminders with gamified engagement.",
+      "tech": ["Express", "Javascript","Flutter", "Gemini API", "MongoDB"],
+      "date": "2025"
+    },
+    {
+      "id": "blinkrag",
+      "name": "BlinkRAG",
+      "description": "A full-stack app to upload documents, chunk & embed them into a vector DB, and ask natural language questions answered in real-time",
+      "tech": ["Python", "Django", "React", "PostgreSQL"],
+      "date": "2025"
+    }
+  ],
+  "languages": [
+    {
+      "id": "ts",
+      "label": "TypeScript JSX",
+      "ext": "tsx",
+      "color": "var(--blue)",
+      "comment": "//"
+    },
+    {
+      "id": "js",
+      "label": "JavaScript",
+      "ext": "jsx",
+      "color": "var(--amber)",
+      "comment": "//"
+    },
+    {
+      "id": "py",
+      "label": "Python",
+      "ext": "py",
+      "color": "var(--green)",
+      "comment": "#"
+    },
+    {
+      "id": "go",
+      "label": "Go",
+      "ext": "go",
+      "color": "var(--blue)",
+      "comment": "//"
+    },
+    {
+      "id": "rs",
+      "label": "Rust",
+      "ext": "rs",
+      "color": "var(--amber)",
+      "comment": "//"
+    },
+    {
+      "id": "java",
+      "label": "Java",
+      "ext": "java",
+      "color": "var(--purple)",
+      "comment": "//"
+    }
+  ],
+  "themes": [
+    {
+      "id": "dark-plus",
+      "label": "Dark+",
+      "colors": {
+        "bg": "#0d1117",
+        "panel": "#12171f",
+        "panel2": "#161c26",
+        "line": "#232a35",
+        "text": "#c9d1d9",
+        "textDim": "#6e7681",
+        "textBright": "#e6edf3",
+        "amber": "#ffcb6b",
+        "purple": "#c792ea",
+        "green": "#89ca78",
+        "blue": "#82aaff"
+      }
+    },
+    {
+      "id": "catppuccin",
+      "label": "Catppuccin Mocha",
+      "colors": {
+        "bg": "#1e1e2e",
+        "panel": "#181825",
+        "panel2": "#313244",
+        "line": "#45475a",
+        "text": "#cdd6f4",
+        "textDim": "#9399b2",
+        "textBright": "#f5f5fb",
+        "amber": "#fab387",
+        "purple": "#cba6f7",
+        "green": "#a6e3a1",
+        "blue": "#89b4fa"
+      }
+    },
+    {
+      "id": "dracula",
+      "label": "Dracula",
+      "colors": {
+        "bg": "#282a36",
+        "panel": "#21222c",
+        "panel2": "#343746",
+        "line": "#44475a",
+        "text": "#f8f8f2",
+        "textDim": "#8892b0",
+        "textBright": "#ffffff",
+        "amber": "#ffb86c",
+        "purple": "#bd93f9",
+        "green": "#50fa7b",
+        "blue": "#8be9fd"
+      }
+    },
+    {
+      "id": "monokai",
+      "label": "Monokai",
+      "colors": {
+        "bg": "#272822",
+        "panel": "#1e1f1c",
+        "panel2": "#3e3d32",
+        "line": "#49483e",
+        "text": "#f8f8f2",
+        "textDim": "#93917f",
+        "textBright": "#ffffff",
+        "amber": "#e6db74",
+        "purple": "#ae81ff",
+        "green": "#a6e22e",
+        "blue": "#66d9ef"
+      }
+    },
+    {
+      "id": "one-dark",
+      "label": "One Dark",
+      "colors": {
+        "bg": "#282c34",
+        "panel": "#21252b",
+        "panel2": "#2c313a",
+        "line": "#3e4451",
+        "text": "#abb2bf",
+        "textDim": "#767c88",
+        "textBright": "#ffffff",
+        "amber": "#e5c07b",
+        "purple": "#c678dd",
+        "green": "#98c379",
+        "blue": "#61afef"
+      }
+    },
+    {
+      "id": "nord",
+      "label": "Nord",
+      "colors": {
+        "bg": "#2e3440",
+        "panel": "#272c36",
+        "panel2": "#3b4252",
+        "line": "#434c5e",
+        "text": "#d8dee9",
+        "textDim": "#8b98b3",
+        "textBright": "#eceff4",
+        "amber": "#ebcb8b",
+        "purple": "#b48ead",
+        "green": "#a3be8c",
+        "blue": "#88c0d0"
+      }
+    },
+    {
+      "id": "light-plus",
+      "label": "Light+",
+      "colors": {
+        "bg": "#ffffff",
+        "panel": "#f3f3f3",
+        "panel2": "#e8e8e8",
+        "line": "#e4e4e4",
+        "text": "#383a42",
+        "textDim": "#6a737d",
+        "textBright": "#000000",
+        "amber": "#c18401",
+        "purple": "#a626a4",
+        "green": "#50a14f",
+        "blue": "#4078f2"
+      }
+    },
+    {
+      "id": "quiet-light",
+      "label": "Quiet Light",
+      "colors": {
+        "bg": "#f5f5f5",
+        "panel": "#f2f2f2",
+        "panel2": "#e8e8e8",
+        "line": "#dddddd",
+        "text": "#333333",
+        "textDim": "#777777",
+        "textBright": "#111111",
+        "amber": "#aa3731",
+        "purple": "#795da3",
+        "green": "#448c27",
+        "blue": "#4078f2"
+      }
+    },
+    {
+      "id": "solarized-light",
+      "label": "Solarized Light",
+      "colors": {
+        "bg": "#fdf6e3",
+        "panel": "#eee8d5",
+        "panel2": "#e0dcc4",
+        "line": "#d6d1ba",
+        "text": "#657b83",
+        "textDim": "#93a1a1",
+        "textBright": "#586e75",
+        "amber": "#b58900",
+        "purple": "#d33682",
+        "green": "#859900",
+        "blue": "#268bd2"
+      }
+    },
+    {
+      "id": "github-light",
+      "label": "GitHub Light",
+      "colors": {
+        "bg": "#ffffff",
+        "panel": "#f6f8fa",
+        "panel2": "#eaeef2",
+        "line": "#d0d7de",
+        "text": "#24292f",
+        "textDim": "#57606a",
+        "textBright": "#1f2328",
+        "amber": "#9a6700",
+        "purple": "#8250df",
+        "green": "#1a7f37",
+        "blue": "#0969da"
+      }
+    },
+    {
+      "id": "one-light",
+      "label": "One Light",
+      "colors": {
+        "bg": "#fafafa",
+        "panel": "#f0f0f0",
+        "panel2": "#e5e5e6",
+        "line": "#d9d9d9",
+        "text": "#383a42",
+        "textDim": "#696c77",
+        "textBright": "#090909",
+        "amber": "#c18401",
+        "purple": "#a626a4",
+        "green": "#50a14f",
+        "blue": "#4078f2"
+      }
+    },
+    {
+      "id": "catppuccin-latte",
+      "label": "Catppuccin Latte",
+      "colors": {
+        "bg": "#eff1f5",
+        "panel": "#e6e9ef",
+        "panel2": "#ccd0da",
+        "line": "#bcc0cc",
+        "text": "#4c4f69",
+        "textDim": "#7c7f93",
+        "textBright": "#4c4f69",
+        "amber": "#fe8019",
+        "purple": "#8839ef",
+        "green": "#40a02b",
+        "blue": "#1e66f5"
+      }
+    }
+  ],
+  "resume": {
+    "googleDriveFileId": "1lP4vHACz-6MBcudHHeueoBDmBxpekvR9"
+  }
+}
