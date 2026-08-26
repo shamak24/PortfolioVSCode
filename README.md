@@ -1,6 +1,6 @@
 # Portfolio VS Code
 
-A React portfolio styled as a VS Code editor — dark theme, tab-bar navigation, command palette, integrated terminal, minimap, and theme/language switchers.
+A React portfolio styled as a VS Code editor themes, tab-bar navigation, command palette, integrated terminal, minimap, and language switchers.
 
 ## Quick start
 
@@ -22,10 +22,10 @@ All portfolio content lives in **`src/data/portfolio.json`**. Edit this file to 
 ### Profile
 
 - `profile.name`, `profile.role`, `profile.location`, `profile.email`
-- `profile.bio` — array of paragraph strings for the About section
-- `profile.focus` — drives the hero code block across all languages
-- `profile.social` — `{ label, url }` pairs for contact links
-- `profile.hero.headline` / `profile.hero.subheadline` — hero section copy
+- `profile.bio` - array of paragraph strings for the About section
+- `profile.focus` - drives the hero code block across all languages
+- `profile.social` - `{ label, url }` pairs for contact links
+- `profile.hero.headline` / `profile.hero.subheadline` - hero section copy
 
 ### Skills
 
@@ -39,7 +39,7 @@ Add or remove entries in `projects`. Each project needs `id`, `name`, `descripti
 
 Twelve themes (six dark, six light) and six syntax languages are defined in `themes` and `languages`.
 
-## Résumé preview
+## Resume preview
 
 Set your Google Drive file ID in `portfolio.json`:
 
