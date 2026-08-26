@@ -11,9 +11,9 @@ export function SkillCategory({ category, index }: SkillCategoryProps) {
   const reducedMotion = useReducedMotion()
 
   const content = (
-    <div className="skill-category">
-      <h4>{category.name}</h4>
-      <div className="tag-row">
+    <div className="skills-panel-row">
+      <h4 className="skills-panel-label">{category.name}</h4>
+      <div className="skills-panel-tags">
         {category.skills.map((skill) => (
           <span
             key={skill.name}
@@ -32,13 +32,13 @@ export function SkillCategory({ category, index }: SkillCategoryProps) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.12, margin: '0px 0px -40px 0px' }}
+      initial={{ opacity: 0, x: -12 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.15, margin: '0px 0px -40px 0px' }}
       transition={{
-        duration: 0.6,
+        duration: 0.5,
         ease: [0.16, 0.84, 0.44, 1],
-        delay: Math.min(index * 0.06, 0.24),
+        delay: Math.min(index * 0.05, 0.25),
       }}
     >
       {content}

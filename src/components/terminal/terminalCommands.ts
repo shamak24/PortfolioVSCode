@@ -12,20 +12,29 @@ interface TerminalContext {
   closeTerminal: () => void
 }
 
-export const TERM_HELP = [
-  'help              show this list',
-  'about             jump to About',
-  'skills            jump to Skills',
-  'projects          list projects',
-  'contact           jump to Contact',
-  'ls                list section files',
-  'cat <file>        print a section as a file',
-  'theme <name>      switch theme, e.g. theme dracula',
-  'lang <name>       switch language, e.g. lang python',
-  'email             copy email to clipboard',
-  'clear             clear the terminal',
-  'exit              close the terminal',
+export interface TerminalHelpEntry {
+  command: string
+  description: string
+}
+
+export const TERMINAL_HELP_ENTRIES: TerminalHelpEntry[] = [
+  { command: 'help', description: 'Show this list' },
+  { command: 'about', description: 'Jump to About' },
+  { command: 'skills', description: 'Jump to Skills' },
+  { command: 'projects', description: 'List projects and jump to Projects' },
+  { command: 'contact', description: 'Jump to Contact' },
+  { command: 'ls', description: 'List section files' },
+  { command: 'cat <file>', description: 'Print a section as a file' },
+  { command: 'theme <name>', description: 'Switch theme, e.g. theme dracula' },
+  { command: 'lang <name>', description: 'Switch language, e.g. lang python' },
+  { command: 'email', description: 'Copy email to clipboard' },
+  { command: 'clear', description: 'Clear the terminal' },
+  { command: 'exit', description: 'Close the terminal' },
 ]
+
+export const TERM_HELP = TERMINAL_HELP_ENTRIES.map(
+  (entry) => `${entry.command.padEnd(18)}${entry.description.toLowerCase()}`,
+)
 
 function buildTermFiles(): Record<string, string> {
   const { profile, projects } = portfolio

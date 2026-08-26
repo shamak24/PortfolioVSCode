@@ -8,7 +8,7 @@ export function Skills() {
   return (
     <section id="skills" className="portfolio-section">
       <SectionHead section={section} />
-      <div className="skill-grid">
+      <div className="skills-panel">
         {portfolio.skills.map((category, i) => (
           <SkillCategory key={category.name} category={category} index={i} />
         ))}
