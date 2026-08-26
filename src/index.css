@@ -96,7 +96,7 @@ a {
 
 /* ---------- Layout shell (matches HTML) ---------- */
 .app-main,
-.app-tabbar,
+.app-tabbar-wrap,
 .app-gutter,
 .app-statusbar {
   position: relative;
@@ -172,23 +172,71 @@ a {
 }
 
 /* ---------- Tab bar ---------- */
-.app-tabbar {
+.app-tabbar-wrap {
   position: fixed;
   top: 0;
   left: var(--gutter-w);
   right: 0;
   height: 44px;
-  background: var(--panel);
-  border-bottom: 1px solid var(--line);
+  z-index: 40;
   display: flex;
   align-items: stretch;
-  z-index: 40;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+
+.app-tabbar {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  background: transparent;
+  border-bottom: none;
+  display: flex;
+  align-items: stretch;
   overflow-x: auto;
   scrollbar-width: none;
 }
 
 .app-tabbar::-webkit-scrollbar {
   display: none;
+}
+
+.app-tabbar-arrow {
+  display: none;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  background: var(--panel-2);
+  border: none;
+  border-left: 1px solid var(--line);
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  padding: 0;
+}
+
+.app-tabbar-arrow-left {
+  border-left: none;
+  border-right: 1px solid var(--line);
+}
+
+.app-tabbar-arrow:hover {
+  background: var(--panel);
+  color: var(--text-bright);
+}
+
+.app-tabbar-arrow[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 640px) {
+  .app-tabbar-wrap.has-overflow .app-tabbar-arrow:not([hidden]) {
+    display: flex;
+  }
 }
 
 .app-tab {
@@ -557,7 +605,172 @@ a {
   font-size: clamp(24px, 4vw, 32px);
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero boot (full-screen loader panel) ---------- */
+.portfolio-boot-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--bg);
+}
+
+.portfolio-boot-screen-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.2;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 0%, transparent 75%);
+}
+
+.portfolio-boot-panel {
+  position: relative;
+  z-index: 1;
+  width: min(560px, 92vw);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  box-shadow:
+    0 30px 80px -20px rgba(0, 0, 0, 0.7),
+    0 0 40px -12px color-mix(in srgb, var(--amber) 25%, transparent);
+  overflow: hidden;
+  font-family: var(--mono);
+}
+
+.portfolio-boot-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel-2);
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.portfolio-boot-panel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+.portfolio-boot-panel-body {
+  padding: 18px 20px 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  min-height: 220px;
+}
+
+.hero-boot-line {
+  white-space: pre-wrap;
+}
+
+.hero-boot-line-in {
+  animation: heroBootLineIn 0.22s ease forwards;
+}
+
+@keyframes heroBootLineIn {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-boot-dim {
+  color: var(--text-dim);
+}
+
+.hero-boot-amber {
+  color: var(--amber);
+}
+
+.hero-boot-url {
+  color: var(--blue);
+}
+
+.hero-boot-success {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.hero-boot-cursor-line {
+  min-height: 1.65em;
+}
+
+.hero-boot-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  background: var(--amber);
+  animation: cursorBlink 1s steps(1) infinite;
+}
+
+.hero-title-block {
+  margin-top: 20px;
+}
+
+.hero-title-block .hero-title {
+  margin: 12px 0 16px;
+}
+
+.hero-success-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green);
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--green) 45%, transparent);
+  background: color-mix(in srgb, var(--green) 12%, transparent);
+  animation: heroSuccessPulse 0.55s ease;
+}
+
+@keyframes heroSuccessPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  60% {
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-success-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-boot-line-in {
+    animation: none;
+  }
+  .hero-boot-cursor {
+    animation: none;
+  }
+  .hero-success-pill {
+    animation: none;
+  }
+}
+
 .hero-title {
   font-size: clamp(32px, 6.5vw, 58px);
   margin: 24px 0 16px;
@@ -807,12 +1020,43 @@ a {
 
 /* Project detail modal */
 .project-modal {
-  width: min(720px, 92vw);
-  max-width: none;
+  display: flex;
+  flex-direction: column;
+  width: 720px;
+  height: 640px;
+  max-width: calc(100vw - 48px);
+  max-height: calc(100vh - 48px);
   border-radius: 10px;
   overflow: hidden;
   padding: 0;
   box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.7);
+}
+
+.project-modal-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+.project-modal-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-modal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-modal-scroll::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border: 2px solid var(--bg);
+  border-radius: 4px;
+}
+
+.project-modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dim);
 }
 
 .project-modal-header {
@@ -820,6 +1064,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  flex-shrink: 0;
   padding: 10px 14px;
   background: var(--panel-2);
   border-bottom: 1px solid var(--line);
@@ -881,7 +1126,8 @@ a {
 
 .project-modal-hero {
   position: relative;
-  min-height: 200px;
+  height: 200px;
+  flex-shrink: 0;
   background-color: var(--panel);
   background-size: cover;
   background-position: center;
@@ -920,7 +1166,7 @@ a {
 }
 
 .project-modal-body {
-  padding: 20px;
+  padding: 24px 28px 28px;
   background: var(--bg);
 }
 
@@ -941,7 +1187,8 @@ a {
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
-  padding: 12px 16px;
+  flex-shrink: 0;
+  padding: 14px 20px;
   border-top: 1px solid var(--line);
   background: var(--panel-2);
 }
@@ -961,12 +1208,21 @@ a {
     justify-content: flex-start;
   }
 
+  .project-modal {
+    width: calc(100vw - 32px);
+    height: min(640px, calc(100vh - 32px));
+  }
+
   .project-modal-hero {
-    min-height: 160px;
+    height: 160px;
   }
 
   .project-modal-body {
-    padding: 16px;
+    padding: 20px 18px 24px;
+  }
+
+  .project-modal-footer {
+    padding: 12px 16px;
   }
 }
 
@@ -1393,7 +1649,9 @@ a {
 /* ---------- Shared transitions ---------- */
 body,
 .app-gutter,
+.app-tabbar-wrap,
 .app-tabbar,
+.app-tabbar-arrow,
 .app-tab,
 .app-statusbar,
 .code-block,

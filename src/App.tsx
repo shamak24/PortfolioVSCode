@@ -1,8 +1,10 @@
 import { portfolio } from '@/data'
+import { motion } from 'framer-motion'
 import { ThemeProvider } from '@/context/ThemeContext'
 import { LanguageProvider } from '@/context/LanguageContext'
 import { UIStateProvider, useUIState } from '@/context/UIStateContext'
 import { useScrollSpy } from '@/hooks/useScrollSpy'
+import { useReducedMotion } from '@/hooks/useReducedMotion'
 import { BackgroundLayers } from '@/components/background/BackgroundLayers'
 import { Gutter } from '@/components/layout/Gutter'
 import { TabBar } from '@/components/layout/TabBar'
@@ -12,6 +14,7 @@ import { CommandPalette } from '@/components/command-palette/CommandPalette'
 import { Terminal } from '@/components/terminal/Terminal'
 import { Minimap } from '@/components/minimap/Minimap'
 import { ResumeModal } from '@/components/resume/ResumeModal'
+import { PortfolioBootScreen } from '@/components/loading/PortfolioBootScreen'
 import { cn } from '@/lib/utils'
 
 function Toast() {
@@ -29,21 +32,33 @@ function Toast() {
 }
 
 function AppShell() {
+  const { bootComplete } = useUIState()
+  const reducedMotion = useReducedMotion()
   const sectionIds = portfolio.sections.map((s) => s.id)
   const activeSection = useScrollSpy(sectionIds, 'home')
 
   return (
     <>
-      <BackgroundLayers />
-      <Gutter />
-      <TabBar activeSection={activeSection} />
-      <MainContent />
-      <Minimap />
-      <StatusBar />
-      <Terminal />
-      <CommandPalette />
-      <ResumeModal />
-      <Toast />
+      {!bootComplete && <PortfolioBootScreen />}
+      {bootComplete && (
+        <motion.div
+          className="portfolio-app"
+          initial={reducedMotion ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+        >
+          <BackgroundLayers />
+          <Gutter />
+          <TabBar activeSection={activeSection} />
+          <MainContent />
+          <Minimap />
+          <StatusBar />
+          <Terminal />
+          <CommandPalette />
+          <ResumeModal />
+          <Toast />
+        </motion.div>
+      )}
     </>
   )
 }

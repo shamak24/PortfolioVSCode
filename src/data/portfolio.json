@@ -16,8 +16,8 @@
     "focus": ["AI", "Full-Stack Development", "Backend Development","Data Science"],
     "available": true,
     "hero": {
-      "headline": "I build tools engineers actually enjoy using.",
-      "subheadline": "Six years shipping backend systems and developer platforms — from API design to the CLI that makes your team's Tuesday less painful."
+      "headline": "Build succeeded on your machine",
+      "subheadline": "0 errors in prod. A few console.logs in dev. We don’t talk about those :D"
     },
     "contact": {
       "title": "Building something interesting?",
@@ -74,7 +74,6 @@
         { "name": "Python", "accentColor": "#4b8bbe" },
         { "name": "JavaScript", "accentColor": "#f7df1e" },
         { "name": "TypeScript", "accentColor": "#3178c6" },
-        { "name": "Go", "accentColor": "#00add8" },
         { "name": "Java", "accentColor": "#f89820" }
       ]
     },
@@ -109,9 +108,7 @@
     {
       "name": "Infrastructure & DevOps",
       "skills": [
-        { "name": "Docker", "accentColor": "#2496ed" },
-        { "name": "Kubernetes", "accentColor": "#326ce5" },
-        { "name": "Kafka", "accentColor": "#d9d9d9" }
+        { "name": "Docker", "accentColor": "#2496ed" }
       ]
     },
     {

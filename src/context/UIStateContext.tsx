@@ -1,6 +1,8 @@
 import { createContext, useContext, useState, type ReactNode } from 'react'
 
 interface UIStateContextValue {
+  bootComplete: boolean
+  setBootComplete: (complete: boolean) => void
   commandPaletteOpen: boolean
   setCommandPaletteOpen: (open: boolean) => void
   terminalOpen: boolean
@@ -16,6 +18,7 @@ interface UIStateContextValue {
 const UIStateContext = createContext<UIStateContextValue | null>(null)
 
 export function UIStateProvider({ children }: { children: ReactNode }) {
+  const [bootComplete, setBootComplete] = useState(false)
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false)
   const [terminalOpen, setTerminalOpen] = useState(false)
   const [resumeModalOpen, setResumeModalOpen] = useState(false)
@@ -32,6 +35,8 @@ export function UIStateProvider({ children }: { children: ReactNode }) {
   return (
     <UIStateContext.Provider
       value={{
+        bootComplete,
+        setBootComplete,
         commandPaletteOpen,
         setCommandPaletteOpen,
         terminalOpen,
