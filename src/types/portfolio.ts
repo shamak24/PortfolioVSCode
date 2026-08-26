@@ -88,11 +88,20 @@ export interface Resume {
   googleDriveFileId: string
 }
 
+export interface EducationEntry {
+  id: string
+  level: string
+  school: string
+  period: string
+  course?: string
+}
+
 export interface PortfolioData {
   profile: Profile
   sections: Section[]
   skills: SkillCategory[]
   projects: Project[]
+  education: EducationEntry[]
   languages: Language[]
   themes: Theme[]
   resume: Resume

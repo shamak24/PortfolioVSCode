@@ -7,6 +7,7 @@ const SECTION_ACCENTS: Record<string, string> = {
   about: '--purple',
   skills: '--green',
   projects: '--amber',
+  education: '--blue',
   contact: '--purple',
 }
 

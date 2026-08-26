@@ -4,8 +4,7 @@
     "role": "Full-Stack Developer",
     "location": "India",
     "bio": [
-      "I'm a software developer based in India, focused on backend infrastructure and the internal tools that make other engineers faster. I like problems where correctness and developer experience are both non-negotiable.",
-      "Outside of work I contribute to a couple of open-source CLI tools and I'm slowly writing a compiler nobody asked for."
+      "I'm a software developer based in India, focused on backend infrastructure and the internal tools that make other engineers faster. I like problems where correctness and developer experience are both non-negotiable."
     ],
     "email": "soumilshamak@gmail.com",
     "social": [
@@ -59,10 +58,18 @@
       "accent": "amber"
     },
     {
+      "id": "education",
+      "label": "education",
+      "number": "04",
+      "eyebrow": "04 — education",
+      "title": "Education",
+      "accent": "blue"
+    },
+    {
       "id": "contact",
       "label": "contact",
-      "number": "04",
-      "eyebrow": "04 — say hello",
+      "number": "05",
+      "eyebrow": "05 — say hello",
       "title": "Contact",
       "accent": "purple"
     }
@@ -166,6 +173,42 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
       "liveDemo": "",
       "github": "https://github.com/shamak24/BlinkRAG"
+    },
+    {
+      "id": "weather-app",
+      "name": "Weather App",
+      "description": "A weather app that shows the weather of a city",
+      "longDescription": [
+        "A weather app that shows the weather of a city",
+        "The app uses the OpenWeatherMap API to get the weather data",
+        "The app uses the React Native to build the app"
+      ],
+      "tech": ["React Native", "OpenWeatherMap API"],
+      "date": "2025",
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
+      "liveDemo": "",
+      "github": "https://github.com/shamak24/WeatherApp"
+    }
+  ],
+  "education": [
+    {
+      "id": "matriculation",
+      "level": "Matriculation",
+      "school": "DAV Public School",
+      "period": "2018 – 2021"
+    },
+    {
+      "id": "intermediate",
+      "level": "Intermediate",
+      "school": "DAV Public School",
+      "period": "2021 – 2023"
+    },
+    {
+      "id": "graduation",
+      "level": "Graduation",
+      "school": "Vellore Institue of Technology, Bhopal",
+      "course": "Bachelor of Technology in Computer Science and Engineering",
+      "period": "2023 – 2027"
     }
   ],
   "languages": [

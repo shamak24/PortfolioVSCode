@@ -6,9 +6,10 @@ interface ProjectCardProps {
   project: Project
   index: number
   onOpen: (project: Project) => void
+  animateImmediately?: boolean
 }
 
-export function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
+export function ProjectCard({ project, index, onOpen, animateImmediately = false }: ProjectCardProps) {
   const reducedMotion = useReducedMotion()
   const meta = project.status ? `${project.date} — ${project.status}` : project.date
   const hasLinks = project.liveDemo || project.github
@@ -69,6 +70,22 @@ export function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
   )
 
   if (reducedMotion) return content
+
+  if (animateImmediately) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.45,
+          ease: [0.16, 0.84, 0.44, 1],
+          delay: Math.min(index * 0.05, 0.25),
+        }}
+      >
+        {content}
+      </motion.div>
+    )
+  }
 
   return (
     <motion.div

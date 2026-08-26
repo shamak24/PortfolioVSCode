@@ -3,6 +3,7 @@ import { Hero } from '@/components/hero/Hero'
 import { About } from '@/components/sections/About'
 import { Skills } from '@/components/sections/Skills'
 import { Projects } from '@/components/sections/Projects'
+import { Education } from '@/components/sections/Education'
 import { Contact } from '@/components/sections/Contact'
 import { portfolio } from '@/data'
 
@@ -14,6 +15,7 @@ export function MainContent() {
       <About />
       <Skills />
       <Projects />
+      <Education />
       <Contact />
       <footer className="app-footer">
         // {portfolio.profile.footer} {new Date().getFullYear()}
