@@ -33,7 +33,15 @@ Each category under `skills` has a `name` and `skills` array. Optional `accentCo
 
 ### Projects
 
-Add or remove entries in `projects`. Each project needs `id`, `name`, `description`, `tech`, and `date`. Optional `status` and `links`.
+Each entry in `projects` supports:
+
+- `description` — short summary shown on the card
+- `longDescription` — array of paragraphs shown in the detail dialog
+- `tech`, `date`, optional `status`
+- `image` — optional URL for the dialog header background
+- `liveDemo` / `github` — optional URLs; link buttons appear top-right on the card only when set
+
+Click a project card to open the detail dialog. Live demo and GitHub buttons on the card open in a new tab without opening the dialog.
 
 ### Themes & languages
 

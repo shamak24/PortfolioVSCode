@@ -5,17 +5,59 @@ import { useReducedMotion } from '@/hooks/useReducedMotion'
 interface ProjectCardProps {
   project: Project
   index: number
+  onOpen: (project: Project) => void
 }
 
-export function ProjectCard({ project, index }: ProjectCardProps) {
+export function ProjectCard({ project, index, onOpen }: ProjectCardProps) {
   const reducedMotion = useReducedMotion()
   const meta = project.status ? `${project.date} — ${project.status}` : project.date
+  const hasLinks = project.liveDemo || project.github
 
   const content = (
-    <article className="project-card">
+    <article
+      className="project-card"
+      onClick={() => onOpen(project)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onOpen(project)
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label={`View details for ${project.name}`}
+    >
       <div className="project-top">
-        <h3>{project.name}</h3>
-        <span className="project-meta">{meta}</span>
+        <div className="project-top-main">
+          <h3>{project.name}</h3>
+          <span className="project-meta">{meta}</span>
+        </div>
+        {hasLinks && (
+          <div className="project-links">
+            {project.liveDemo && (
+              <a
+                href={project.liveDemo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary btn-sm"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Live demo ↗
+              </a>
+            )}
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary btn-sm"
+                onClick={(e) => e.stopPropagation()}
+              >
+                GitHub ↗
+              </a>
+            )}
+          </div>
+        )}
       </div>
       <p className="desc">{project.description}</p>
       <div className="tag-row">
@@ -23,21 +65,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <span key={tag} className="tag">{tag}</span>
         ))}
       </div>
-      {project.links && project.links.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-3">
-          {project.links.map((link) => (
-            <a
-              key={link.url}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-mono text-xs text-blue hover:text-text-bright"
-            >
-              {link.label} ↗
-            </a>
-          ))}
-        </div>
-      )}
     </article>
   )
 

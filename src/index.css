@@ -747,6 +747,7 @@ a {
   padding: 26px;
   margin-bottom: 20px;
   transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  cursor: pointer;
 }
 
 .project-card:hover {
@@ -755,18 +756,41 @@ a {
   box-shadow: 0 16px 40px -16px color-mix(in srgb, var(--amber) 50%, transparent);
 }
 
+.project-card:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
 .project-top {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  gap: 12px;
+  align-items: flex-start;
+  gap: 16px;
   margin-bottom: 10px;
-  flex-wrap: wrap;
 }
 
-.project-top h3 {
+.project-top-main {
+  min-width: 0;
+}
+
+.project-top-main h3 {
   font-size: 18px;
   color: var(--text-bright);
+  margin-bottom: 4px;
+}
+
+.project-links {
+  display: flex;
+  flex-shrink: 0;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.btn-sm {
+  font-size: 12px;
+  padding: 6px 12px;
 }
 
 .project-meta {
@@ -779,6 +803,171 @@ a {
   color: var(--text);
   margin-bottom: 16px;
   font-size: 15px;
+}
+
+/* Project detail modal */
+.project-modal {
+  width: min(720px, 92vw);
+  max-width: none;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.7);
+}
+
+.project-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--panel-2);
+  border-bottom: 1px solid var(--line);
+}
+
+.project-modal-tabs {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.project-modal-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-bright);
+  background: var(--panel);
+  border-right: 1px solid var(--line);
+  position: relative;
+}
+
+.project-modal-tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 2px;
+  background: var(--amber);
+}
+
+.project-modal-tab .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+  flex-shrink: 0;
+}
+
+.project-modal-close {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.project-modal-close:hover {
+  background: var(--line);
+  color: var(--text-bright);
+}
+
+.project-modal-hero {
+  position: relative;
+  min-height: 200px;
+  background-color: var(--panel);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.project-modal-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--bg) 20%, transparent) 0%,
+    color-mix(in srgb, var(--bg) 88%, transparent) 100%
+  );
+}
+
+.project-modal-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 24px 20px 20px;
+}
+
+.project-modal-hero h3 {
+  font-family: var(--mono);
+  font-size: clamp(22px, 4vw, 28px);
+  color: var(--text-bright);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.project-modal-meta {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.project-modal-body {
+  padding: 20px;
+  background: var(--bg);
+}
+
+.project-modal-description p {
+  color: var(--text);
+  margin-bottom: 14px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.project-modal-description p:last-child {
+  margin-bottom: 20px;
+}
+
+.project-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  border-top: 1px solid var(--line);
+  background: var(--panel-2);
+}
+
+.project-modal-footer .btn {
+  font-size: 13px;
+  padding: 10px 18px;
+}
+
+@media (max-width: 640px) {
+  .project-top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-links {
+    justify-content: flex-start;
+  }
+
+  .project-modal-hero {
+    min-height: 160px;
+  }
+
+  .project-modal-body {
+    padding: 16px;
+  }
 }
 
 /* ---------- Contact ---------- */

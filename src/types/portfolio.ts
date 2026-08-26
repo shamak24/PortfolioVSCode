@@ -34,19 +34,17 @@ export interface SkillCategory {
   skills: Skill[]
 }
 
-export interface ProjectLink {
-  label: string
-  url: string
-}
-
 export interface Project {
   id: string
   name: string
   description: string
+  longDescription: string[]
   tech: string[]
   date: string
   status?: string
-  links?: ProjectLink[]
+  image?: string
+  liveDemo?: string
+  github?: string
 }
 
 export interface Language {

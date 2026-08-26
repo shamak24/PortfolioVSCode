@@ -13,7 +13,7 @@
       { "label": "LinkedIn", "url": "https://www.linkedin.com/in/soumilshamak" }
     ],
     "availability": "open to full-time roles and select consulting work",
-    "focus": ["distributed systems", "dev tools"],
+    "focus": ["AI", "Full-Stack Development", "Backend Development","Data Science"],
     "available": true,
     "hero": {
       "headline": "I build tools engineers actually enjoy using.",
@@ -129,23 +129,46 @@
     {
       "id": "arthasage",
       "name": "Arthasage",
-      "description": " An AI-powered financial intelligence platform that analyzes spending behavior, detects anomalies and provides personalized financial guidance through a conversational AI assistant.",
-      "tech": ["Python", "FastAPI", "Next.js", "Gemini API, Postgres"],
-      "date": "2026"
+      "description": "An AI-powered financial intelligence platform that analyzes spending behavior, detects anomalies, and provides personalized financial guidance through a conversational AI assistant.",
+      "longDescription": [
+        "Arthasage is a full-stack financial intelligence platform built to make personal finance feel less like spreadsheet archaeology and more like talking to a knowledgeable advisor.",
+        "Users connect spending data and interact with a Gemini-powered assistant that surfaces anomalies, explains trends in plain language, and suggests actionable next steps — from cutting recurring waste to planning around upcoming bills.",
+        "The backend uses FastAPI for ingestion, categorization, and risk scoring pipelines, while the Next.js frontend focuses on fast dashboards and a chat-first workflow. PostgreSQL stores normalized transactions and user preferences with careful attention to query patterns for real-time summaries."
+      ],
+      "tech": ["Python", "FastAPI", "Next.js", "Gemini API", "PostgreSQL"],
+      "date": "2026",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+      "liveDemo": "https://example.com/arthasage",
+      "github": "https://github.com/example/arthasage"
     },
     {
       "id": "neuracare",
       "name": "NeuraCare",
-      "description": "An AI-powered health management platform that delivers personalized risk alerts, diet guidance and smart medication reminders with gamified engagement.",
-      "tech": ["Express", "Javascript","Flutter", "Gemini API", "MongoDB"],
-      "date": "2025"
+      "description": "An AI-powered health management platform that delivers personalized risk alerts, diet guidance, and smart medication reminders with gamified engagement.",
+      "longDescription": [
+        "NeuraCare combines wearable-friendly health tracking with an AI layer that translates raw signals into reminders, diet suggestions, and early risk alerts users can actually act on.",
+        "The Flutter app handles daily engagement — streaks, medication schedules, and lightweight check-ins — while an Express API coordinates user profiles, notification rules, and Gemini-generated guidance tuned to each person's goals.",
+        "MongoDB stores flexible health event documents, and the architecture prioritizes low-latency push paths so critical reminders land on time without feeling spammy."
+      ],
+      "tech": ["Express", "JavaScript", "Flutter", "Gemini API", "MongoDB"],
+      "date": "2025",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+      "github": "https://github.com/example/neuracare"
     },
     {
       "id": "blinkrag",
       "name": "BlinkRAG",
-      "description": "A full-stack app to upload documents, chunk & embed them into a vector DB, and ask natural language questions answered in real-time",
+      "description": "A full-stack app to upload documents, chunk and embed them into a vector DB, and ask natural language questions answered in real time.",
+      "longDescription": [
+        "BlinkRAG is a document Q&A system: upload PDFs or notes, let the pipeline chunk and embed them into PostgreSQL with pgvector, then query everything through a React UI that streams answers as they're generated.",
+        "Django handles authentication, file uploads, background embedding jobs, and retrieval orchestration. The frontend shows citation-aware responses so users can trace every answer back to source passages.",
+        "Built as a portfolio-grade RAG demo, it emphasizes observable pipelines — clear ingestion status, embedding progress, and retrieval latency — so debugging retrieval quality doesn't require guesswork."
+      ],
       "tech": ["Python", "Django", "React", "PostgreSQL"],
-      "date": "2025"
+      "date": "2025",
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
+      "liveDemo": "https://example.com/blinkrag",
+      "github": "https://github.com/example/blinkrag"
     }
   ],
   "languages": [
