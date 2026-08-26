@@ -1,5 +1,5 @@
 import { portfolio } from '@/data'
-import { SectionReveal } from './SectionReveal'
+import { SectionHead } from './SectionHead'
 import { EducationEntry } from './EducationEntry'
 
 export function Education() {
@@ -8,11 +8,7 @@ export function Education() {
 
   return (
     <section id="education" className="portfolio-section">
-      <SectionReveal className="sec-head">
-        <span className="sec-num">{section.number}</span>
-        <div className="eyebrow">{section.eyebrow}</div>
-        <h2>{section.title}</h2>
-      </SectionReveal>
+      <SectionHead section={section} />
       <div className="education-timeline" aria-label="Education timeline">
         {entries.map((entry, index) => (
           <EducationEntry

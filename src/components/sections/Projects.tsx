@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { portfolio } from '@/data'
 import type { Project } from '@/types/portfolio'
-import { SectionReveal } from './SectionReveal'
+import { SectionHead } from './SectionHead'
 import { ProjectCard } from './ProjectCard'
 import { ProjectModal } from '@/components/projects/ProjectModal'
 import { ProjectsAllDialog } from '@/components/projects/ProjectsAllDialog'
@@ -31,11 +31,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="portfolio-section">
-      <SectionReveal className="sec-head">
-        <span className="sec-num">{section.number}</span>
-        <div className="eyebrow">{section.eyebrow}</div>
-        <h2>{section.title}</h2>
-      </SectionReveal>
+      <SectionHead section={section} />
 
       <div className="projects-preview">
         <div className="projects-preview-list">

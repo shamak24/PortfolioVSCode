@@ -1,6 +1,7 @@
 import { portfolio } from '@/data'
 import { useUIState } from '@/context/UIStateContext'
 import { SectionReveal } from './SectionReveal'
+import { SectionHead } from './SectionHead'
 
 export function Contact() {
   const section = portfolio.sections.find((s) => s.id === 'contact')!
@@ -9,11 +10,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="portfolio-section">
-      <SectionReveal className="sec-head">
-        <span className="sec-num">{section.number}</span>
-        <div className="eyebrow">{section.eyebrow}</div>
-        <h2>{section.title}</h2>
-      </SectionReveal>
+      <SectionHead section={section} />
       <SectionReveal delay={0.06}>
         <div className="contact-block">
           <h2>{profile.contact.title}</h2>

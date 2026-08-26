@@ -4,7 +4,7 @@
     "role": "Full-Stack Developer",
     "location": "India",
     "bio": [
-      "I'm a software developer based in India, focused on backend infrastructure and the internal tools that make other engineers faster. I like problems where correctness and developer experience are both non-negotiable."
+      "I'm a final year CSE student at VIT Bhopal and an aspiring software developer based in India, focused on backend infrastructure and the internal tools that make other engineers faster. I like problems where correctness and developer experience are both non-negotiable.", "I'm open to full-time roles in the field of Full-Stack Development, Backend Development and AI."
     ],
     "email": "soumilshamak@gmail.com",
     "social": [
@@ -16,7 +16,13 @@
     "available": true,
     "hero": {
       "headline": "Build succeeded on your machine",
-      "subheadline": "0 errors in prod. A few console.logs in dev. We don’t talk about those :D"
+      "subheadline": "0 errors in prod. A few console.logs in dev. We don’t talk about those :D",
+      "quips": [
+        "// works on my machine™",
+        "console.log('still deploying confidence...')",
+        "git push origin pray",
+        "99 bugs in the code — patch Tuesday, panic today"
+      ]
     },
     "contact": {
       "title": "Building something interesting?",
@@ -37,7 +43,7 @@
       "id": "about",
       "label": "about",
       "number": "01",
-      "eyebrow": "01 — who I am",
+      "eyebrow": "who I am",
       "title": "About",
       "accent": "purple"
     },
@@ -45,7 +51,7 @@
       "id": "skills",
       "label": "skills",
       "number": "02",
-      "eyebrow": "02 — technical skills",
+      "eyebrow": "technical skills",
       "title": "Skills",
       "accent": "green"
     },
@@ -53,7 +59,7 @@
       "id": "projects",
       "label": "projects",
       "number": "03",
-      "eyebrow": "03 — selected work",
+      "eyebrow": "selected work",
       "title": "Projects",
       "accent": "amber"
     },
@@ -61,7 +67,7 @@
       "id": "education",
       "label": "education",
       "number": "04",
-      "eyebrow": "04 — education",
+      "eyebrow": "education",
       "title": "Education",
       "accent": "blue"
     },
@@ -69,7 +75,7 @@
       "id": "contact",
       "label": "contact",
       "number": "05",
-      "eyebrow": "05 — say hello",
+      "eyebrow": "say hello",
       "title": "Contact",
       "accent": "purple"
     }
@@ -173,29 +179,15 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
       "liveDemo": "",
       "github": "https://github.com/shamak24/BlinkRAG"
-    },
-    {
-      "id": "weather-app",
-      "name": "Weather App",
-      "description": "A weather app that shows the weather of a city",
-      "longDescription": [
-        "A weather app that shows the weather of a city",
-        "The app uses the OpenWeatherMap API to get the weather data",
-        "The app uses the React Native to build the app"
-      ],
-      "tech": ["React Native", "OpenWeatherMap API"],
-      "date": "2025",
-      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
-      "liveDemo": "",
-      "github": "https://github.com/shamak24/WeatherApp"
     }
   ],
   "education": [
     {
-      "id": "matriculation",
-      "level": "Matriculation",
-      "school": "DAV Public School",
-      "period": "2018 – 2021"
+      "id": "graduation",
+      "level": "Graduation",
+      "school": "Vellore Institue of Technology, Bhopal",
+      "course": "Bachelor of Technology in Computer Science and Engineering",
+      "period": "2023 – 2027"
     },
     {
       "id": "intermediate",
@@ -204,11 +196,10 @@
       "period": "2021 – 2023"
     },
     {
-      "id": "graduation",
-      "level": "Graduation",
-      "school": "Vellore Institue of Technology, Bhopal",
-      "course": "Bachelor of Technology in Computer Science and Engineering",
-      "period": "2023 – 2027"
+      "id": "matriculation",
+      "level": "Matriculation",
+      "school": "DAV Public School",
+      "period": "2018 – 2021"
     }
   ],
   "languages": [
@@ -257,23 +248,6 @@
   ],
   "themes": [
     {
-      "id": "dark-plus",
-      "label": "Dark+",
-      "colors": {
-        "bg": "#0d1117",
-        "panel": "#12171f",
-        "panel2": "#161c26",
-        "line": "#232a35",
-        "text": "#c9d1d9",
-        "textDim": "#6e7681",
-        "textBright": "#e6edf3",
-        "amber": "#ffcb6b",
-        "purple": "#c792ea",
-        "green": "#89ca78",
-        "blue": "#82aaff"
-      }
-    },
-    {
       "id": "catppuccin",
       "label": "Catppuccin Mocha",
       "colors": {
@@ -288,6 +262,23 @@
         "purple": "#cba6f7",
         "green": "#a6e3a1",
         "blue": "#89b4fa"
+      }
+    },
+    {
+      "id": "dark-plus",
+      "label": "Dark+",
+      "colors": {
+        "bg": "#0d1117",
+        "panel": "#12171f",
+        "panel2": "#161c26",
+        "line": "#232a35",
+        "text": "#c9d1d9",
+        "textDim": "#6e7681",
+        "textBright": "#e6edf3",
+        "amber": "#ffcb6b",
+        "purple": "#c792ea",
+        "green": "#89ca78",
+        "blue": "#82aaff"
       }
     },
     {

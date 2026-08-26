@@ -556,24 +556,82 @@ a {
 
 /* ---------- Section headers ---------- */
 .sec-head {
-  position: relative;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0 22px;
+  align-items: start;
   margin-bottom: 48px;
 }
 
+.sec-head-body {
+  min-width: 0;
+}
+
 .sec-num {
-  position: absolute;
-  top: -0.35em;
-  left: -0.05em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 36px;
+  padding-right: 16px;
+  margin-top: 2px;
   font-family: var(--mono);
-  font-size: clamp(80px, 14vw, 160px);
-  font-weight: 800;
-  color: var(--text);
-  opacity: 0.04;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
   line-height: 1;
+  letter-spacing: 0.06em;
   user-select: none;
-  pointer-events: none;
-  z-index: -1;
-  transition: color 0.25s ease;
+  border-right: 1px solid var(--line);
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.sec-num::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: 2px;
+  height: 100%;
+  border-radius: 1px;
+  opacity: 0.85;
+  transition: opacity 0.25s ease;
+}
+
+.sec-num[data-accent='purple'] {
+  color: var(--purple);
+}
+
+.sec-num[data-accent='purple']::after {
+  background: linear-gradient(180deg, var(--purple), color-mix(in srgb, var(--purple) 40%, var(--blue)));
+}
+
+.sec-num[data-accent='green'] {
+  color: var(--green);
+}
+
+.sec-num[data-accent='green']::after {
+  background: linear-gradient(180deg, var(--green), color-mix(in srgb, var(--green) 40%, var(--blue)));
+}
+
+.sec-num[data-accent='amber'] {
+  color: var(--amber);
+}
+
+.sec-num[data-accent='amber']::after {
+  background: linear-gradient(180deg, var(--amber), color-mix(in srgb, var(--amber) 40%, var(--purple)));
+}
+
+.sec-num[data-accent='blue'] {
+  color: var(--blue);
+}
+
+.sec-num[data-accent='blue']::after {
+  background: linear-gradient(180deg, var(--blue), color-mix(in srgb, var(--blue) 40%, var(--purple)));
+}
+
+.sec-head:hover .sec-num::after {
+  opacity: 1;
 }
 
 .eyebrow {
@@ -603,6 +661,28 @@ a {
 
 .sec-head h2 {
   font-size: clamp(24px, 4vw, 32px);
+}
+
+.sec-title-word {
+  display: inline-block;
+}
+
+@media (max-width: 640px) {
+  .sec-head {
+    grid-template-columns: 44px 1fr;
+    gap: 0 14px;
+    margin-bottom: 40px;
+  }
+
+  .sec-num {
+    padding-right: 12px;
+    font-size: 12px;
+    min-height: 32px;
+  }
+}
+
+.hero-title-word {
+  display: inline-block;
 }
 
 /* ---------- Hero boot (full-screen loader panel) ---------- */
@@ -769,6 +849,11 @@ a {
   .hero-success-pill {
     animation: none;
   }
+
+  .sec-title-word,
+  .hero-title-word {
+    filter: none !important;
+  }
 }
 
 .hero-title {
@@ -782,7 +867,25 @@ a {
   font-size: 17px;
   color: var(--text-dim);
   max-width: 520px;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
+}
+
+.hero-quip-block {
+  margin-bottom: 24px;
+}
+
+.hero-quip-wrap {
+  position: relative;
+  min-height: 26px;
+  max-width: 520px;
+}
+
+.hero-quip {
+  font-family: var(--mono);
+  font-size: 13.5px;
+  color: var(--purple);
+  line-height: 1.55;
+  margin: 0;
 }
 
 .code-block {

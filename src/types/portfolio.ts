@@ -16,6 +16,7 @@ export interface Profile {
   hero: {
     headline: string
     subheadline: string
+    quips?: string[]
   }
   contact: {
     title: string

@@ -40,9 +40,11 @@ function isLightTheme(bg: string): boolean {
   return luminance > 0.6
 }
 
+const DEFAULT_THEME_ID = 'catppuccin'
+
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const themes = portfolio.themes
-  const [themeId, setThemeId] = useLocalStorageString('portfolio-theme', themes[0].id)
+  const [themeId, setThemeId] = useLocalStorageString('portfolio-theme', DEFAULT_THEME_ID)
 
   const theme = themes.find((t) => t.id === themeId) ?? themes[0]
 
