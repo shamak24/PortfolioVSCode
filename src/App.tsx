@@ -16,6 +16,7 @@ import { Minimap } from '@/components/minimap/Minimap'
 import { ResumeModal } from '@/components/resume/ResumeModal'
 import { PortfolioBootScreen } from '@/components/loading/PortfolioBootScreen'
 import { cn } from '@/lib/utils'
+import { Analytics } from '@vercel/analytics/react'
 
 function Toast() {
   const { toast } = useUIState()
@@ -69,6 +70,7 @@ export default function App() {
       <LanguageProvider>
         <UIStateProvider>
           <AppShell />
+          <Analytics />
         </UIStateProvider>
       </LanguageProvider>
     </ThemeProvider>
